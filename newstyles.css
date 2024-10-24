@@ -1,0 +1,335 @@
+* {
+  user-select: none;
+  transition: all 0.3s;
+  font-family: 'Lucida Sans';
+}
+
+body {
+  margin: 0;
+  background-color: #222;
+  cursor: url(cursor1.png), auto;
+  min-height: 90vh; 
+  overflow: hidden;
+}
+
+a{
+  color: white;
+}
+
+.menu {
+  background: linear-gradient;
+  background-color: yellowgreen;
+  height: 100vh;
+  width: 100%;
+  max-width: 50vw;
+  padding: 12px 0;
+  left: 0;
+  top: 0;
+  position: absolute;
+  border-radius: 0 25px 25px 0;
+}
+
+.titlemenu {
+  color: white;
+  display: block;
+  text-align: center;
+  margin: 5px 0;
+  font-size: clamp(1rem, 6vw, 3rem);
+}
+
+.justify{
+  text-align: justify;
+}
+
+.name {
+  display: block;
+  text-align: center;
+}
+
+.perfilimage {
+  height: clamp(5rem, 15vw, 10rem);
+  aspect-ratio: 1/1;
+  background-size: cover;
+  border-radius: 50px;
+  margin: 20px 10px 0 10px;
+}
+
+.mynor > .perfilimage {
+  float: left;
+  background-image: url(yo.jpg);
+}
+.jose > .perfilimage {
+  float: right;
+  background-image: url(jose.jpg);
+}
+.Joseph > .perfilimage {
+  float: left;
+  background-image: url(j.png);
+  background-color: white;
+}
+.octavio > .perfilimage {
+  float: right;
+  background-image: url(o.png);
+  background-color: white;
+}
+
+.noimage {
+  font-size: 10vw;
+}
+
+.lines {
+  z-index: 1;
+  position: relative;
+  height: 75%;
+  aspect-ratio: 1 / 1;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  place-items: center;
+}
+
+.linesvoid2 {
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+}
+
+.line {
+  background-color: #333;
+  width: 100%;
+  height: 10px;
+  border-radius: 20px;
+}
+
+#header {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #444;
+  height: 5%;
+  border-radius: 0 0 25px 25px;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  overflow: hidden;
+}
+
+.actualState{
+  font-size: clamp(2rem, 5vw, 3rem);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  position: relative;
+  right: 0;
+}
+
+.cards {
+  height: 33%; 
+  min-height: 500px;
+  width: 90%;
+  max-width: 1200px; 
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 5% 80% 5%;
+  gap: 10px;
+  position: relative;
+  margin: 0 auto;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+
+.card {
+  transition: transform 0.5s;
+  border-radius: 25px;
+  padding: 10px;
+  grid-row: 2/3;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  cursor: url(cursor2.png), auto;
+}
+
+.cards:hover > .card:not(:hover) { filter: blur(5px);
+}
+
+.card2{
+  grid-row: 1 / -1;
+}
+
+.front, .back {
+  backface-visibility: hidden;
+}
+
+.back {
+  padding: 10px;
+  position: relative;
+  top: -100%;
+  height: 100%;
+  border-radius: 25px;
+  background-color: #444;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
+.cards:hover > .card:hover > .front {
+  transform: rotateY(180deg);
+}
+
+.cards:hover > .card:hover > .back {
+  transform: rotateY(0deg);
+}
+
+.title {
+  display: flex;
+  color: white;
+  justify-content: center;
+  font-size: clamp(0.5rem, 5vw, 2rem);
+}
+
+.paragraph {
+  color: white;
+  padding: 0 10px;
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+}
+
+.images {
+  height: 75%;
+  width: 100%;
+  border-radius: 25px 25px 0 0;
+  grid-template-columns: 5% 90% 5%;
+  grid-template-rows: 5% 90% 5%;
+  display: grid;
+  place-items: center;
+  background-color: greenyellow;
+}
+
+.thing{
+  height: 65%;
+  aspect-ratio: 1/1;
+  background-size: cover;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.pizza{
+  background-image: url(orange-juice.png);
+}
+.pizza-n-coke{
+  background-image: url(manuelita.png);
+}
+.coke{
+  background-image: url(coupon.png);
+}
+
+.bottom {
+  background-color: #444;
+  position: relative;
+  height: 25%;
+  border-radius: 0 0 25px 20px;
+}
+
+.touch {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: clamp(1rem, 5vw, 2rem);
+}
+
+.offertbutton{
+  position: absolute;
+  bottom: 0;
+}
+
+.button {
+  transform: translate(-50%, -50%);
+  left: 50%;
+  font-size: clamp(1rem, 6vw, 3rem);
+  color: black !important;
+  border: none;
+  padding: 5px 20px;
+  border-radius: 25px;
+  background-image: linear-gradient(45deg, white, yellowgreen);
+  background-size: 500%;
+}
+
+.button:hover{
+  background-position: 100%;
+}
+
+.numbers {
+  width: auto;
+  height: 25%;
+  display: block;
+}
+
+.number {
+  color: #fff;
+  padding: 2%;
+  font-size: clamp(1rem, 6vw, 3rem);
+}
+
+.number1 {
+  float: left;
+}
+
+.number2 {
+  float: right;
+}
+
+.alert{
+  z-index: 20;
+  opacity: 0;
+  display: none;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  backdrop-filter: blur(7px);
+}
+
+.particles {
+  width: 100vw;
+  aspect-ratio: 1 / 1;
+  background-size: cover;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+
+.alertcontainer {
+  opacity: 0;
+  padding: 20px;
+  height: aut0;
+  max-height: 500px;
+  aspect-ratio: 1 / 1;
+  background-color: #333;
+  border-radius: 25px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%; 
+}
+
+.alertcontainer > .paragraph {
+  display: block;
+  text-align: center;
+}
+
+.notwinalerttext {
+  display: block;
+  text-align: center;
+}
+
+.okbutton {
+  position: absolute;
+  bottom: 0;
+}

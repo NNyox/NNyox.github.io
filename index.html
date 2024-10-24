@@ -1,0 +1,312 @@
+<html>
+  <head>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <link rel="stylesheet" href="newstyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  </head>
+  <body>
+    <header id="header">
+        <div class="lines">
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+          <div class="line line3"></div>
+      </div>
+
+      <div class="actualState">
+        <a href="http://wa.me/+50583598132">Contact With Us</a>
+      </div>
+
+      <div class="menu">
+        <div class="linesvoid"></div>
+        <hr>
+        <span class="titlemenu">Our Objetives</span>
+        <hr>
+        <p class="paragraph">our objetives are want to put an end to that little craving that we all have from time to time, trying to maintain the best quality-price balance, in addition to having some very delicious condiments, thank you for reading this and supporting us, enjoy it!</p>
+        <hr>
+        <span class="titlemenu">About Us</span>
+        <hr>
+        <div class="perfil Mynor">
+          <hr>
+          <span class="paragraph name" translate="no">Mynor</span>
+          <hr>
+          <div class="perfilimage"></div>
+          <p class="paragraph justify">i like a lot of things, but i really like to program, that's why beacuse i'm the charge with the marketing</p>
+        </div>
+
+        <hr>
+
+        <div class="perfil jose">
+          <hr>
+          <span class="paragraph name" translate="no">Jose Antonio</span>
+          <hr>
+          <div class="perfilimage"></div>
+          <p class="paragraph justify">this boy's a profesional making draws, his caligraphy's flawless and this is the charge with the contability</p>
+        </div>
+
+        <hr>
+
+        <div class="perfil joseph">
+          <hr>
+          <span class="paragraph name" translate="no">Joseph</span>
+          <hr>
+          <div class="perfilimage"></div>
+          <p class="paragraph justify">is very smart and responsable, this boy's the staff in charge of the materials</p>
+        </div>
+
+        <hr>
+
+        <div class="perfil Octavio">
+          <hr>
+          <span class="paragraph name" translate="no">Octavio</span>
+          <hr>
+          <div class="perfilimage"></div>
+          <p class="paragraph justify">is very loyal and attracts good vibes, this boy's the staff charge of serve the delicious manuelitas</p>
+        </div>
+
+      </div>
+
+    </header>
+
+
+    <div class="cards">
+      <div class="card1 card">
+        <div class="front">
+          <div class="images">
+            <div class="pizza thing"></div>
+          </div>
+          <div class="bottom">
+            <span class="touch">touch me</span>
+          </div>
+        </div>
+        <div class="back">
+          <span class="title">info</span>
+          <hr>
+          <p class="paragraph">a delicious and cold orange juice, for calm down this hell heat weaves of these days</p>
+        </div>
+      </div>
+
+      <div class="card2 card">
+        <div class="front">
+          <div class="images">
+            <div class="pizza-n-coke thing"></div>
+          </div>
+          <div class="bottom">
+            <span class="touch">touch me</span>
+          </div>
+        </div>
+        <div class="back">
+          <span class="title">info</span>
+          <hr>
+          <p class="paragraph">this manuelitas with chesse are so delicious for kill hunger and give yourself a taste</p>
+        </div>
+      </div>
+
+      <div class="card3 card">
+        <div class="front">
+          <div class="images">
+            <div class="coke thing"></div>
+          </div>
+          <div class="bottom">
+            <span class="touch">touch me</span>
+          </div>
+        </div>
+        <div class="back">
+          <span class="title">info</span>
+          <hr>
+          <p class="paragraph">if you bought 2 times, you're going to recive a 25% of discount in your third article</p>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="offertbutton button">play for -50% discount</button>
+
+    <div class="alert">
+
+      <div class="particles"></div>
+
+      <div class="alertcontainer getoffer">
+        <span class="paragraph">comparing values</span>
+        <hr>
+        <div class="numbers">
+          <span class="number1 number"></span>
+          <span class="number2 number"></span>
+        </div>
+        <hr>
+        <span class="paragraph">please, wait...</span>
+      </div>
+
+      <div class="alertcontainer notwinalert">
+        <span class="paragraph notwinalerttext">Ohhh! i'm so sorry</span>
+        <span class="paragraph notwinalerttext">but you don't win :(</span>
+        <hr>
+        <span class="paragraph">your numbers</span>
+        <span class="number1 notwinnumber1 number"></span>
+        <span class="number2 notwinnumber2 number"></span>
+        <button class="okbutton button">ok</button>
+      </div>
+
+      <div class="alertcontainer winalert">
+        <span class="paragraph winalerttext">How is this posible</span>
+        <span class="paragraph winalerttext">you don't can win >:/</span>
+        <button class="okbutton button">ok</button>
+      </div>
+
+      <div class="alertcontainer notries">
+        <span class="paragraph notriesalerttext">you don't have more tries</span>
+        <button class="okbutton button">ok</button>
+      </div>
+
+    </div>
+
+    <script>
+      function query(x) {
+        return document.querySelector(x)
+      }
+      function queryAll(x) {
+        return document.querySelectorAll(x)
+      }
+      function byid(x) {
+        return document.getElementById(x)
+      }
+      function getstyle(x, y) {
+        return getComputedStyle(query(x))[y]
+      }
+      function setstyle(x, y, z) {
+        x.style[y] = z
+      }
+
+      let open = false
+
+      function setMenu() {
+        if (!open) {
+          setstyle(query('.menu'), 'width', 
+            parseFloat(getComputedStyle(query('.lines')).height) +
+            parseFloat(getComputedStyle(query('#header')).padding) * 2 + 'px'
+          )
+          setstyle(query('.linesvoid'), 'height', getstyle('#header', 'height'))
+          // setstyle(query('.linesvoid2'), 'height', getstyle('#header', 'height'))
+        }
+      };
+      setMenu();
+
+      window.addEventListener('resize', setMenu);
+
+      query('.lines').addEventListener('click', (event) => {
+        if (!open) {
+          open = true
+          setstyle(query('.menu'), 'backgroundColor', '#333')
+          setstyle(query('.menu'), 'overflow', 'auto')
+          query('.menu').scrollTop = '0'
+          setstyle(query('#header'), 'overflow', 'visible')
+          setstyle(query('.menu'), 'width', '50vw')
+          setstyle(query('.lines'), 'rotate', '360deg')
+          queryAll('.line').forEach((element) => {
+            setstyle(element, 'backgroundColor', 'yellowgreen')
+          })
+        } else if (open) {
+          open = false
+          setstyle(query('.menu'), 'backgroundColor', 'yellowgreen')
+          setstyle(query('.menu'), 'overflow', '')
+          setstyle(query('#header'), 'overflow', 'hidden')
+          setMenu()
+          setstyle(query('.lines'), 'rotate', '0deg')
+          queryAll('.line').forEach((element) => {
+            setstyle(element, 'backgroundColor', '#222')
+          })
+        }
+      })
+
+      let speed = 50;
+      let desaceleracion = 1.15;
+      let interval;
+
+      function genNumber() {
+        let inner = query('.number1');
+        let randomNumber = Math.floor(Math.random() * 20) + 1;
+        inner.innerHTML = randomNumber;
+
+        let inner2 = query('.number2');
+        let randomNumber2 = Math.floor(Math.random() * 20) + 1;
+        inner2.innerHTML = randomNumber2;
+
+        if (randomNumber === randomNumber2) {
+          inner.style.color = 'green'
+          inner2.style.color = 'green'
+        } else {
+          inner.style.color = 'white'
+          inner2.style.color = 'white'
+        }
+        
+        speed *= desaceleracion;
+
+        let three = Math.floor(Math.random() * 3) + 1;
+
+        if (speed < 1000) {
+          interval = setTimeout(() => genNumber(), speed);
+        } else {
+          inner.style.color = 'white'
+          inner2.style.color = 'white'
+
+          if (randomNumber2 === randomNumber) {
+            randomNumber2 = Math.floor(Math.random() * randomNumber2 - 1) + 1;
+          };
+          inner2.innerHTML = randomNumber2
+
+          setTimeout(() => {
+            query('.getoffer').style.opacity = '0'
+            query('.notwinalert').style.opacity = '1'
+            query('.notwinnumber1').innerHTML = randomNumber
+            query('.notwinnumber2').innerHTML = randomNumber2
+          }, 900 * 2)
+
+          query('.particles').style.backgroundImage = 'url(https://calamitymod.wiki.gg/images/9/95/Plasma_Explosion_Small.gif)'
+          setTimeout(() => {
+            query('.particles').style.backgroundImage = ''
+          }, 900 * 3)
+        };
+      };
+
+      let tries = localStorage.getItem('oportunities') || 3;
+
+      query('.offertbutton').addEventListener('click', function() {
+        if (tries > 0) {
+          query('.alert').style.display = 'block';
+          setTimeout(() => {
+
+            speed = 50;
+            clearTimeout(interval);
+            genNumber();
+
+            query('.alert').style.opacity = '1';
+            query('.getoffer').style.display = 'block';
+            query('.getoffer').style.opacity = '1';
+
+            tries -= 1
+            localStorage.setItem('oportunities', tries)
+          }, 500)
+        } else {
+          query('.alert').style.display = 'block';
+          setTimeout(() => {
+            query('.alert').style.opacity = '1';
+            query('.notries').style.opacity = '1'
+          }, 500);
+        };
+      });
+
+      queryAll('.okbutton').forEach((element) => {
+        element.addEventListener('click', () => {
+          query('.getoffer').style.opacity = '0'
+          query('.winalert').style.opacity = '0'
+          query('.notwinalert').style.opacity = '0'
+          query('.notries').style.opacity = '0'
+          query('.particles').style.backgroundImage = ''
+          query('.alert').style.opacity = '0'
+          setTimeout(() => {
+            query('.alert').style.display = 'none'
+          }, 500);
+        })
+      })
+    </script>
+  </body>
+</html>
